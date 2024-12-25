@@ -19,17 +19,23 @@
     </div>
     <nav>
         <ul>
-            <li>sejarah</li>
-            <li>geografis</li>
-            <li>wisata</li>
+            <li>
+                <a href="#sejarah">Sejarah</a>
+            </li>
+            <li>
+                <a href="#geografis">Geografis</a>
+            </li>
+            <li>
+                <a href="#wisata">Wisata</a>
+            </li>
         </ul>
     </nav>
-</header>\
+</header>
 <main>
     <div id="content">
         <article id="sejarah" class="card">
             <h2 id="sejarah">sejarah kota pemalang</h2>
-            <img src="sejarah.jpeg" alt="sejarah kota pemalang" class="featured-img"/>
+            <img src="gambar/sejarah.jpg" alt="sejarah kota pemalang" class="featured-img"/>
             <p>
                 Kota Pemalang, sebuah kabupaten di Jawa Tengah, memiliki sejarah yang kaya dan panjang, membentang dari masa prasejarah hingga masa modern. Jejak peradabannya dapat ditelusuri melalui berbagai penemuan arkeologis yang mengindikasikan bahwa wilayah ini telah dihuni sejak zaman dahulu kala.
             </p>
@@ -42,7 +48,7 @@
         </article>
         <article id="geografis" class="card">
             <h2 id="geografis">geografis kota Pemalang</h2>
-            <img src="geografis.jpg" alt="geografis kota pemalang" class="featured-img"/>
+            <img src="gambar/geografis.jpg" alt="geografis kota pemalang" class="featured-img"/>
             <p>
                 Pemalang, sebuah kabupaten di Jawa Tengah, memiliki karakteristik geografis yang unik. Letaknya yang strategis di pesisir utara Pulau Jawa memberikan pengaruh yang signifikan terhadap kondisi alam dan kehidupan masyarakatnya. Sebagian besar wilayah Pemalang merupakan dataran rendah yang subur, cocok untuk pertanian. Namun, di bagian selatan terdapat beberapa daerah perbukitan yang menawarkan keindahan alam. Pemalang juga dilalui oleh beberapa sungai besar yang berperan penting dalam irigasi dan sebagai sumber air bersih. Dengan garis pantai yang cukup panjang, Pemalang memiliki potensi besar dalam sektor perikanan. Iklim tropis dengan dua musim utama, yaitu musim hujan dan musim kemarau, mewarnai kehidupan di Pemalang. Secara geografis, Pemalang sangat menarik karena memadukan keindahan pantai, kesuburan daratan, dan pesona pegunungan.
             </p>
@@ -52,21 +58,21 @@
             <p>Pemalag memiliki banyak wisata yang menarik untuk dikunjungi. Berikut beberapa rekomendasi wisata yang wajib kalian datangi saat di Pemalang </p>
         <section>
             <h3>bukit tangkeban perahu</h3>
-            <img src="tangkeban.jpg" alt="tangkeban perahu" class="featured-img"/>
+            <img src="gambar/tangkeban.jpg" alt="tangkeban perahu" class="featured-img"/>
             <p>
                 Bukit Tangkeban Perahu adalah salah satu destinasi wisata yang menawarkan pemandangan alam yang indah dan menawan. Dari puncak bukit, pengunjung dapat menikmati panorama pegunungan dan hamparan sawah yang hijau. Selain itu, di bukit ini juga terdapat beberapa spot foto yang instagramable, seperti perahu raksasa yang menjadi ikon bukit ini. Bagi yang suka hiking, bukit ini juga menyediakan jalur pendakian yang menantang.
             </p>
         </section>
         <section>
             <h3>curug bengkawah</h3>
-            <img src="bengkawah.jpg" alt="curug bengkawah" class="featured-img"/>
+            <img src="gambar/bengkawah.jpg" alt="curug bengkawah" class="featured-img"/>
             <p>
                 Curug Bengkawah adalah air terjun yang terletak di kawasan hutan pinus yang sejuk dan asri. Air terjun ini memiliki ketinggian sekitar 30 meter dan airnya jernih serta segar. Pengunjung dapat berenang atau sekadar bermain air di kolam alami yang terbentuk di bawah air terjun. Di sekitar curug, terdapat area perkemahan yang nyaman dan fasilitas yang lengkap, sehingga cocok untuk berkemah bersama keluarga atau teman.
             </p>
         </section>
         <section>
             <h3>gunung slamet</h3>
-            <img src="slamet.jpg" alt="gunung slamet" class="featured-img"/>
+            <img src="gambar/slamet.jpg" alt="gunung slamet" class="featured-img"/>
             <p>
                 Gunung Slamet adalah gunung tertinggi di Jawa Tengah dan merupakan salah satu gunung berapi aktif di Indonesia. Meskipun terkenal dengan jalur pendakian yang cukup sulit, Gunung Slamet menawarkan pemandangan alam yang spektakuler dari puncaknya. Pengunjung dapat menikmati keindahan alam sekitar, serta melihat matahari terbit dan terbenam dari ketinggian. Bagi yang suka petualangan dan tantangan, mendaki Gunung Slamet bisa menjadi pengalaman yang tak terlupakan.
             </p>
@@ -79,7 +85,7 @@
                 <h2>Kota pemalang</h2>
                 <p>Pemalang Ikhlas</p>
                 <figure>
-                    <img src="profile.jpeg" alt="profile pemalang"/>
+                    <img src="gambar/profile.jpeg" alt="profile pemalang"/>
                     <figcaption>Pemalang</figcaption>
                 </figure>
             </header>
@@ -116,3 +122,19 @@
     <p>copyright dika ramadani dicoding @2019</p>
 </footer>
 </html>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navItems = document.querySelectorAll('nav ul li a');
+        navItems.forEach(item => {
+            item.addEventListener('click', function(event) {
+                event.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    });
+</script>

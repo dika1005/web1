@@ -1,6 +1,8 @@
 h1 {
     color: black;
-    text-decoration: wavy underline;                                    
+    text-decoration: underline;
+    font-family: quicksand;
+
 }
 *{
     box-sizing: border-box;
@@ -16,7 +18,8 @@ h2,h3 {
 footer {
     padding: 10px;
     color: white;
-    background-color: rgb(28, 236, 236);
+    background-color: #008DDA;
+    text-align: center;
 }
 nav a {
     font: size 18px;
@@ -47,28 +50,29 @@ nav a:hover {
 .jumbotron{
     font-size: 20px;
     padding: 60px;
-    background-color: aqua;
+    background-color: #008DDA;
     text-align: center;
     color: white;
 }
 nav ul {
     padding-inline: 4rem;
     display: flex;
-    gap: 2rem;
+    gap: 3rem;
 }
 nav li {
     list-style-type: none;
 }
 nav {
-    background-color: rgb(28, 236, 236);
+    background-color: #41C9E2;
     padding: 5px;
-    position: sticky;
-    top: 0;
+    display: flex;
+    justify-content: center;
 }
 main{
     padding: 20px;
     display: flex;
     gap: 1.5rem;
+    background-color: #F7EEDD;
 }
 #content{
     flex: 5;
